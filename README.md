@@ -1,5 +1,5 @@
 # Test-Login-OrangeHRM
-Repository ini berisi hasil test untuk login website OrangeHRM menggunakan Cypress. Dimana pengujian ini menggunakan UI Automation Test.
+Repository ini berisi hasil test untuk login website OrangeHRM menggunakan Cypress. Dimana pengujian ini menggunakan UI Automation Test. Code untuk test casenya berada pada file login.cy.js
 
 ## Test Cases
 
