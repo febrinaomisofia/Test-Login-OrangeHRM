@@ -23,3 +23,5 @@ Repository ini berisi hasil test untuk login website OrangeHRM menggunakan Cypre
 
 ## Result
 All test cases passed successfully.
+Untuk bukti hasil test case dapat dilihat pada link berikut:
+https://drive.google.com/file/d/1Z4VYsssJJZIa5a0HuDFGY7fQd3GzQgzb/view?usp=drive_link
