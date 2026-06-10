@@ -34,9 +34,11 @@ describe('OrangeHRM Login POM', () => {
         )
 
         loginPage.errorMessage()
-            .should('contain', 'Invalid credentials')
+            .should('be.visible')
+            .and('contain.text', 'Invalid credentials')
     })
 
+    
     it('TC003 - Login with invalid username', () => {
 
         loginPage.login(
@@ -45,7 +47,8 @@ describe('OrangeHRM Login POM', () => {
         )
 
         loginPage.errorMessage()
-            .should('contain', 'Invalid credentials')
+            .should('be.visible')
+            .and('contain.text', 'Invalid credentials')
     })
 
     it('TC004 - Login with empty username', () => {
@@ -55,7 +58,9 @@ describe('OrangeHRM Login POM', () => {
             loginData.emptyUsername.password
         )
 
-        cy.contains('Required').should('be.visible')
+        cy.contains('Required')
+            .should('be.visible')
+            .and('contain.text', 'Required')
     })
 
     it('TC005 - Login with empty password', () => {
@@ -65,7 +70,9 @@ describe('OrangeHRM Login POM', () => {
             loginData.emptyPassword.password
         )
 
-        cy.contains('Required').should('be.visible')
+        cy.contains('Required')
+            .should('be.visible')
+            .and('contain.text', 'Required')
     })
 
     it('TC006 - Verify PIM menu displayed', () => {
@@ -132,6 +139,7 @@ describe('OrangeHRM Login POM', () => {
 
         dashboardPage.userDropdown()
             .should('exist')
+            .and('be.visible')
     })
 
     it('TC012 - Verify Search Input Exists', () => {
@@ -143,6 +151,7 @@ describe('OrangeHRM Login POM', () => {
 
         dashboardPage.searchInput()
             .should('exist')
+            .and('be.visible')
     })
 
 })

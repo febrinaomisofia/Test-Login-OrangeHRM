@@ -1,5 +1,10 @@
 class DashboardPage {
 
+    verifyDashboardLoaded() {
+    cy.url().should('include', '/dashboard')
+    cy.contains('Dashboard').should('be.visible')
+    }
+
     pimMenu() {
         return cy.contains('PIM')
     }
